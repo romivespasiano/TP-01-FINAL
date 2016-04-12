@@ -1,0 +1,670 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,700);
+/*font-family: 'Raleway', sans-serif;*/
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/*font-family: 'Open Sans', sans-serif;*/
+/*selector universal */
+*{box-sizing: border-box;} /*sirve para relleno y borde*/
+
+body{
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	/*list-style: upper-alpha; cambia por letras mayusculas
+	  list-style: upper-roman; cambia por numeros romanos
+	  list-style: upper-latin;  cambia por letras latinas
+	  list-style: url(...foto.png) se pueden vincular imagenes
+	  list-style: disc; viñeta puntito
+	  list-style: circle; 
+	  list-style: square;
+	*/
+}
+header{
+	z-index: 20000px;
+	background-color: #fff;
+	position: fixed;
+	height: 90px;
+	top:0;
+	right: 0;
+	left: 0;
+	box-shadow: 0 0 10px rgba(228,226,231,0.5);
+	/* box-sizing: border-box;  la caja va a tener 1200 de ancho */
+	/*min-width: ;
+	min-height: 100px;----minimo posible 
+	max-height: ; ----Maximo posible
+	max-width: ;
+	RELLENOS*/
+
+	padding-top:; /*Costado superior de la caja, el contenido no va a tocar */
+	padding-right: ;  /*Costado lateral derecho hacia dentro */
+	padding-bottom: ;
+	padding-left: ;
+
+	/*SHort hand*/
+	padding: 15px ; /*igual para todos los costados*/
+	/* padding: 40px 10px; 1ero arriba y abajo, derecha e izquierda*/
+	/* padding: 40px 10px 5px;  1er arriba, 2do derecha y tercero abajo*/
+	/*padding: 40px 10px 5px 40px;  1er arriba, 2do derecha 3ro abajo y 4to izquierda*/
+	/*border-top: solid width 3px #000;*/
+	/*border: solid 10px #000;*/
+	/* solid / dotted / dashed / double diferentes tipos de lineas*/
+	/* MARGENES: Generar distancia*/
+	margin: 0 auto; /*auto es el elemento que define el margen a la mitad y lo centra*/
+	/* margin-left:20px ; 
+	margin-top: 50px;
+	margin-right: ;
+	margin-bottom: 20px;*/
+
+}
+.cleaner{
+	clear: both;
+}
+nav{
+	/*background-color: yellow;*/
+	float: right; /* lo mandan a la derecha del elemento padre*/
+
+}
+nav li{
+	display: inline-block; /* Dejo los elementos uno al lado del otro*/
+	margin-left: 25px;
+}
+
+nav a{
+	color:#333;
+}
+nav a:hover{
+	color: black;
+}
+.contenedorinicial{
+	background-color:;
+	background: url(../images/indexbanner-bg3.jpg) no-repeat center top scroll;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	min-height: 500px;
+	/*background-color: #000;  fondo de color*/
+}
+.wrapper{
+	max-width: 1200px;
+	/*background-color: rgba(255, 0,0,0.5);*/
+	margin: auto;
+}
+.main-title{
+	color: #fff;
+	font-size: 40px;
+	/*margin-top: 280px;
+	margin-bottom: 0;*/
+	margin: 280px 0 0;
+	display: inline-block;
+}
+/*Selector de hermano adyacente
+Da estilo a un elemento que se encuentre inmediatamente despues de otro, siempre
+y cuando sean hermanos*/
+.main-title + p{
+	color:#fff;
+	font-size: 18px;
+	width: 550px;
+	line-height: 37px;
+}
+.cuatroelementos {
+	margin-top: 150px;
+
+}
+.cuatroelementos article{
+	text-align: center;
+	width: 25%;
+	float: left;
+	padding: 0 25px;
+	/*background-color: yellow;*/
+}
+.cuatroelementos article img{
+	width: 33,33333333%;
+	transition: transform 250ms ease-in;
+	-webkit-transition: transform 250ms ease-in;
+
+}
+.cuatroelementos article:hover img{
+	transform: rotate(360deg) scale(1.2);
+	-ms-trasform: rotate(360deg) scale(1.2);
+	-webkit-transform: rotate(360deg) scale(1.2);
+	box-shadow: 0 0 12px #666;
+	border-radius: 50px;
+}
+/* PSEUDO CLASE :HOVER;
+.cuatroelementos article:hover{
+	background-color: #333;
+}*/
+.buscador{
+	background-color: yellow;
+	position: relative;
+	margin-top: 230px;
+}
+
+.buscador input[type=text]{
+	width: 84%;
+	height: 70px;
+	border: solid 1px #ccc;
+	font-family: inherit;
+	font-size: 20px;
+	padding: 0 30px;
+	/*padding: 0 210px 0 30px;*/
+}
+
+.buscador input[type=submit]{
+	/*width: 200px;*/
+	width: 16%;
+
+	height: 70px;
+	background-color: #63BBDE;
+	color: #fff;
+	font-family: inherit;
+	font-size: 20px;
+	border: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	/*COLOR PICKER (CTRL + SHIFT + C)*/
+}
+
+/*
+	
+	position: relative;/*Permite decir que el elemento absoluto se posiciona en base a esa caja y no el body
+	position: absolute; /*Se ubica en una capa por encima de otro elemento. Un solo elemento Siempre toma el costado del body
+		propiedades: top / right /left/ buttom
+		top:0;
+		right: 0;
+	*/
+.subtitle{
+	text-align: center;
+	font-size: 32px;
+	margin:80px 0 10px;
+}
+/*selector de hermano adyacente*/
+.subtitle + p{
+	text-align: center;
+	font-size: 15px;
+
+}
+.caracteristicas{
+	float: left;
+	/*width: 350px;*/
+	width: 29.166666666667%;
+	
+}
+
+.imagen-mitad{
+	/*width: 300px;*/
+	width: 25%;
+	float: left;
+	margin: 0 8.333333333333%;	
+}
+.imagen-mitad img{
+	width: 100%;
+}
+
+.caract-izq article{
+	position: relative;
+	text-align: right;
+	padding-right: 60px;
+}
+
+.caract-izq article img{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.caract-der article{
+	position: relative;
+	padding-left: 60px;
+
+}
+
+.caract-der article img{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.imagen-mitad{
+	width: 25%;
+	float: left;
+	margin: 0 8,333333333333%;
+}
+.imagen-mitad img{
+	width: 100%;
+}
+.contenedor-secundario{
+	background: url(../images/pricing-bg.jpg) center top no-repeat;
+	min-height: 400px;
+	margin-top: -80px;
+	// border-top:solid 5px red ;
+}
+
+.contenedor-secundario h2{
+	text-align: center;
+	padding-top: 80px;	
+	margin: 0;
+	font-size: 32px;
+	font-weight: 700;
+}
+.contenedor-secundario h2 + p{
+	text-align: center;
+	margin-top: 20px;
+}
+.subtitledos{
+	text-align: center;
+	font-size: 32px;
+	margin:220px 0 10px;
+	padding-top: 600px;
+}
+/*selector de hermano adyacente*/
+.subtitledos + p{
+	text-align: center;
+	font-size: 15px;
+
+}
+.pricing-boxes{
+	margin: 80px 0;
+	// border: dotted 3px green;
+}
+
+table, td, tr{
+	padding: 0;
+	border-spacing: 0;
+	line-height: 16px;
+	// border:solid 1px #000; 
+}
+
+.box-price{
+	/*width: 270px;*/
+	width: 22.5%;
+	float: left;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	padding: 15px;
+	margin-right: 3.333333333333%;
+}
+
+.last{
+	margin-right: 0;
+}
+
+.box-price table{
+	width: 100%;
+	text-align: center;
+}
+
+.box-price table h4{
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.box-price table h3{
+	font-size: 60px;
+	margin:0;
+	padding-top: 20px;
+	line-height: 70px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+
+.box-price table h3 i{
+	font-style: normal;
+	font-weight: bold;
+}
+
+.box-price table h3 sup{
+	display: inline-block;
+	vertical-align: top;
+	font-size: 14px;
+	font-weight: bold;
+	position: relative;
+	top: 5px;
+}
+
+.box-price table b{
+	font-weight: 400;
+	color: #7B7B7B;
+	font-size: 14px;
+	display:block;
+	border-bottom: solid 1px #ccc;
+	padding-bottom: 20px;
+}
+.table-info{
+ 	height: 30px;
+}
+.blue-txt{
+	color: #00abf0;
+}
+.yellow-txt{
+	color: #f9d423;
+}
+.orange-txt{
+	color: #ff9359;
+}
+.pink-txt{
+	color: #f75f40;
+}
+.select{
+	background-color: #00abf0;
+	border-radius: 5px;
+	width: 75%;
+	height: 40px;
+	font-size: 14px;
+	color: #fff;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	margin-top: 20px;
+	letter-spacing: 2px;
+
+}	
+.select a{
+		text-decoration: none;
+		color: #fff;
+}
+.advertising{
+	height: 250px;
+	margin: 80px 0 0;
+	background-color: #233141;
+	text-align: center;
+}
+.advertising-text h3{
+	/*height: 50px;*/
+	font-size: 28px;
+	font-weight: normal;
+	color: #d6dfef;
+	font-family: 'Raleway', sans-serif;
+	padding-top: 70px;
+}
+.advertising-text a{
+	text-decoration: none;
+	color: #00adf0;
+	font-weight: bold;
+	font-size: 36px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+footer{
+	/*height: 80px;*/
+	margin: 0;
+	background-color: #151d26;
+	color: #d6dfef;
+}
+footer p{
+	float: left;
+	padding: 20px 0;
+	font-size: 13px;
+	/*background-color: red;*/
+}
+footer nav{
+	font-size: 13px;
+	padding: 35px 0 20px;
+	/*background-color: red;*/
+
+}
+footer nav ul li a{
+	color: #d6dfef;
+}
+footer nav ul li a:hover{
+	color: #fff;
+}
+
+
+
+p{
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	/* Unidades de medida
+	 -px (medida absoluta)
+	 -em (relativa) En funcion del elemento padre
+	 */
+	 color: ;
+	 /* Se puede escribir el color el ingles o en hexadecimal
+	 hexadecimal
+	 NAME=OLIVE
+	 RGB(255,0,0)
+	 rgba(255,0,0,5)Definir un color pero agregando el color alfa, es decir transparencia
+	 Textos de color transparentados
+	 */
+	/* font-weight: normal; /*Bold/ Le saca la negrita a los textos que la tienen por ejemplo h1, etc**/
+}
+
+h1{
+	/*font-weight: normal;*/
+	font-style:; /*Forzar el texto para ponerlo en oblicua cuando la familia de texto no lo tiene*/
+	text-align: left; /*left - right - center - justify   -----> no conviene para dispositivos moviles*/
+	/*text-transform: uppercase; uppercase--> mayusculas
+	none - uppercase - lowercase - capitalize  Evita redigitalizar los textos*/
+	text-decoration: none; /*Permite sacar los subrayados a los links 
+	none - underline - overline - line-through ---> tacha el texto*/
+	letter-spacing: ; /*Interletrado*/
+	word-spacing:; /*interpalabras*/
+	line-height: ; /*Interlineado valor default 6px*/
+}
+
+/*-------Contacto----------*/
+
+.contenedorcontact{
+	background: url(../images/indexbanner-bg2.jpg) no-repeat center top scroll;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	min-height: 500px;
+}
+.form-contact{
+	margin: 50px 10% 0;
+}
+
+.form-contact input[type="text"]{
+	display: block;
+	width: 95%;
+	height: 50px;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	margin: 20px 2.5%;
+	font-family: inherit;
+	font-size: 20px;
+	padding: 0 30px;
+}
+.form-contact textarea{
+	float: right;
+	width: 45%;
+	height: 190px;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+	margin: 20px 2.5%;
+	font-family: inherit;
+	font-size: 20px;
+	padding: 14px 30px;
+}
+.form-contact-izq{
+	float: left;
+	width: 50%;
+}
+.form-contact button{
+	width: 16%;
+	height: 40px;
+	background-color: #00adf0;
+	color: #fff;
+	border-radius: 5px;
+	font-family: inherit;
+	font-size: 16px;
+	border:none;
+	text-align: center;
+	margin: 30px 40% auto;
+	padding: 0 30px;
+}
+
+@media(max-width: 860px){
+	.wrapper{
+		width: 96%;
+	}
+	header nav{
+		display: inline-block;
+		float:none;
+		margin-left: 18%;
+	}
+	.cuatroelementos article{
+	width: 50%;
+	min-height: 380px;
+}
+	.box-price{
+	width: 45%;
+    margin-right: 3%;
+    margin-bottom: 4%;
+    margin-left: 2%;
+}
+	.advertising{
+	margin: 18% 0 0;
+	text-align: center;
+}
+	.advertising-text h3{
+	height: 50px;
+}
+	footer{
+	/*height: 80px;*/
+	text-align: center;
+	margin: -15px 0 0;
+}
+	footer p{
+		float:none;
+		padding: 20px 0 10px;
+	}
+	footer nav{
+		display: inline-block;
+		float:none;
+		padding: 0px 0 20px;
+		margin-right: 5%;
+	}
+	.form-contact{
+	margin: 50px 0 0;
+}
+
+}
+@media(max-width: 700px){
+	header{
+	position: static; /*Posicionamiento estatico*/
+	text-align: center;
+	height: auto;
+	}
+	header nav{
+		margin-left: 0;
+		display: block; /*Elemento de bloque para que ocupe todo el ancho*/
+	}
+
+		header nav li{
+		display: block; /*Elemento de bloque para que ocupe todo el ancho*/
+		padding: 10px 0;
+	}
+	.contenedorinicial{
+		margin-top: 0;
+		background: none;
+		min-height: inherit;
+		/*background: transparent; cuando le quiero sacar el color*/
+	}/*Agrupacion de selectores*/
+	.main-title,
+	.main-title + p{
+	display: none;
+	
+	}
+	.buscador{
+	margin-top: 0px;
+	}
+	.caracteristicas{
+	/*background-color: red;*/
+	float:none;
+	width: 100%; /*Mantiene el ancho*/
+	}
+	.imagen-mitad{
+	float: none;
+	width: 50%;
+	margin: 50px auto;
+	}
+	.caract-izq article{
+	text-align: left;
+	padding-right: 0;
+	padding-left: 60px;
+	}
+	.caract-izq article img{	
+	left:0;
+	right: auto; /*se aplica cuaando es necesario por la posicion absoluta*/
+	}
+	.contenedor-secundario{
+		background-size: 100%;
+		margin-top: 30px;
+		}
+	.contenedorcontact{
+	display: none;
+	}
+	.form-contact{
+	margin: 50px auto;
+}
+
+.form-contact input[type="text"]{
+	width: 95%;
+}
+.form-contact textarea{
+	float: none;
+	width: 95%;
+	margin: 0 2.5%;
+	padding: 14px 30px;
+}
+.form-contact-izq{
+	float: none;
+	width: 95%;
+}
+.form-contact button{
+	width: 18%;
+}
+
+}
+
+@media (max-width: 480px){
+	.wrapper{
+		width: 94%;
+	}
+	.buscador input[type=submit]{
+		width: 25%;
+		font-size: 16px;
+		
+	}
+	.contenedor-secundario h2{
+		padding-top: 30px;
+		}
+	.cuatroelementos{
+		margin-top: 40px;
+	}
+	.cuatroelementos article{
+		float: none;
+		width: 100%;
+		min-height: 0;
+}
+	.pricing-boxes{
+		margin-top: 50px;
+	}
+	.box-price{
+		float:none;
+		width: 70%;
+		margin: 30px auto;
+	}
+	.form-contact button{
+	width: 25%;
+}
+
+	.advertising-text h3{
+	font-size: 18px;
+}
+.advertising-text a{
+	font-size: 26px;
+}
+
+
+}
